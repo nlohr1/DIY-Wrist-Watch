@@ -4,8 +4,9 @@
 New small OLED-Clock with **8-pin** RTC-chip DS3231**MZ** (RTC = Real-Time Chip) and the commonly known Arduino ATmega328-chip/uController, in conjunction with an OLED-Display (SSD1306-chip) - displaying Date, Time, (Battery)-Voltage and Skin-Temperature.
 
 Both, Micro-Processor and OLED are switched-on at Button-press, and Off/disconnected from Battery **per hardware** (Schmitt-Trigger Transistor-circuit) after about 8 seconds, so that the only remaining comsumtion comes from RTC-chip in stand-by-mode, consuming less than 1uA.  
-I resigned to use the uControllers software-"power-down" function, because this does not disconnect the OLED-display(chip) and other chips on board from Battery, which are causing additional power-consumtion. Current-Leakages are minimized through the double-mosfet FDC6237 with Gate Threshold Voltages with 1-2V and two double-diodes with very small leakage-current of 20nA (BAS40-05W).  
-With this configuration the small CR2032-Lithium-Battery lasts more than 2 years (proved! - using the clock-display about 10 times/day).
+I resigned to use the uControllers software-"power-down" function, because this does not disconnect the OLED-display(chip) and other chips on board from Battery, which are causing additional power-consumtions.  
+Current-Leakages are minimized through the double-mosfet FDC6237 (small Gate-Capacitances and Gate Threshold Voltages with 1-2V) and two double-diodes (BAS40-05W) with very small leakage-currents of 20nA.  
+With this configuration the CR2032-Lithium-Battery lasts more than 2 years (proved! - using the clock-display about 10 times/day).
 
 The Clock additionally provides a calendar, displaying the actual month(days) and a relatively bright Flashlight-LED, consuming about only 10mA.
 
