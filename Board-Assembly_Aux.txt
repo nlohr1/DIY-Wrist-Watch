@@ -1,0 +1,9 @@
+Layer:
+------
+Board-Assembly...	    All together		=>  Gamma 2,00 (!)
+Board-Assembly-1.png	=>  tNames, bNames, Measures	=>  Gamma 0,60
+(Board-Assembly-2.png	=>  Motor)			=>  ---
+Board-Assembly-3.png	=>  Batt, Cath			=>  ---
+Board-Assembly-4.png	=>  Pads, Vias, Pad-, Pad	=>  Gamma 0,60
+Board-Assembly-5.png	=>  Dimension, tValues, bValues	=>  2x Gamma 0,60 (=schwarz)
+Board-Assembly-6.png	=>  Document			=>  ---
