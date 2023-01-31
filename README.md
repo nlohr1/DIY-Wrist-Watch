@@ -23,4 +23,4 @@ Case, Lid and battery-Holder are 3D-Printed with 0.13mm Layer-height and 100% In
 
 - Layout: Eagle 7.4
 - Prototype etched with 0.8mm FR4-board with Toner-Direct methode (2 layers: wax-paper fixed/congruented with 0.4mm needles/wire-clamps on the 4 outer-edges)
-- CAM-files for JLCPCB FR4-board 0.8mm
+- CAM-files for JLCPCB FR4-board 0.8mm ("OLED-Clock-6_JLCPCB_CAM.zip").
