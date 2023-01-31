@@ -8,10 +8,11 @@ I resigned to use the uControllers software-"power-down" function, because this 
 Current-Leakages are minimized through the double-mosfet FDC6237 (small Gate-Capacitances and Gate Threshold Voltages with 1-2V) and two double-diodes (BAS40-05W) with very small leakage-currents of 20nA.  
 With this configuration the CR2032-Lithium-Battery lasts more than 2 years (proved! - using the clock-display about 10 times/day).
 
-The Clock additionally provides a calendar, displaying the actual month(days) and a relatively bright Flashlight-LED, consuming about only 10mA.
+The Clock additionally provides a calendar, displaying the actual month(days) and a relatively bright Flashlight-LED, consuming only about 10mA.
 
 Two Buttons are handling Display-"On", FlashLight-On/Off, Calendar and Set/Reset of the Clock, meanwhile Display-"Off" is done automatically after 8 seconds.
 I commented every line of the software, so it is possible to modify the whole code (at own "risk").  
+The "OLED-Watch-6-nl-Manual.txt" file prives a short user-manual list.  
 
 The Software code is Arduino-based and is flashed through an ISP-Programmer to the ATmega328-Chip - without bootloader, to save start-time.  
 To flash the chip I use the known **avrdude** command-line-program, flashing the Arduino-compiled resulting hex-file with an ISP-Programmer (USBasp), this connected on one side through USB-Port to my Notebook and on the other through a 6-pole ISP-Connector-Socket to the Clock-board.
