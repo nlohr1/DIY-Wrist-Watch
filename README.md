@@ -5,6 +5,7 @@ New small OLED-Clock with **8-pin** RTC-chip DS3231**MZ** (RTC = Real-Time Chip)
 
 ---
 
+![OLED-Clock Case](https://github.com/nlohr1/DIY-Wrist-Watch/blob/main/OLED-Clock-6-nl_Case.png)
 ![OLED-Clock schematic](https://github.com/nlohr1/DIY-Wrist-Watch/blob/main/OLED-Clock-6-nl-sch.png)  
 ![OLED-Clock pcb-layout](https://github.com/nlohr1/DIY-Wrist-Watch/blob/main/OLED-Clock-6-nl-brd.png)
 
