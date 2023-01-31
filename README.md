@@ -47,9 +47,9 @@ The Clock additionally provides a calendar, displaying the actual month(days) an
 Two Buttons are handling the Display-"On", FlashLight-On/Off, Calendar and Set/Reset of the Clock, meanwhile Display-"Off" is done automatically after 8 seconds.
 The code is subdivided in several sections, commented on the code-head with jump-markers: §0, §1, §2...  
 I commented every line of the software, so it's possible to understand and modify it (at your own "risk")...  
-The "OLED-Watch-6-nl-Manual.txt" file prives a short user-manual list.  
+The "OLED-Watch-6-nl-Manual.txt" file provides a short user-manual list.  
 
-The Software code is Arduino-based and is flashed through an ISP-Programmer to the ATmega328-Chip - without bootloader, to save start-time.  
+The Software code (Arduino-based C++) is flashed through an ISP-Programmer to the ATmega328-Chip - without bootloader, to save start-time.  
 To flash the chip I use the known **avrdude** command-line-program, flashing the Arduino-compiled resulting hex-file with an ISP-Programmer (USBasp), this connected on one side through USB-Port to my Notebook and on the other through a 6-pole ISP-Connector-Socket to the Clock-board.
 
 Case, Lid and battery-Holder are 3D-Printed with 0.13mm Layer-height and 100% Infill (PLA: 205°C / 60°C). I provided .stl-files of case, lid and battery-holder, also the corresponding .gcode-files for a 220x220mm 3D-Printer (Hot-)bed, as beeing my Anycubic-Pro, also usable for similar printers like Prusa-MK3, etc.
