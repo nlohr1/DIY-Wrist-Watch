@@ -16,30 +16,31 @@ in conjunction with a 128x64px OLED-Display (SSD1306-chip) - displaying Date, Ti
 
 ----
 ### Partlist (BOM) for "OLED-Clock-6-nl.sch":  
-<b><code>Qty.      Components        Value           Description                                        Package</code></b><code>
-1x         C1                2,2uF           Capacitor, SMD                                     C0603
-3x         C2,C3,C4          1uF             Capacitor, SMD                                     C0603
-5x         C5,C6,C7,C8,C9    100n            Capacitor, SMD                                     C0603
-2x         D1,D2             BAS40-05(W)     Dual-Schottky-Diode, low-leakage (1uA), SMD        SOT23 (-323-R)
-1x         IC1               ATMEGA328P      8-bit Microcontroller (4x8 = 32 Pin), SMD          TQFP32-08
-1x         IC2               DS3231MZ        RTC Real-Time Clock (8-Pin), SMD                   SO08
-1x         JP1               AVR-ISP-6       AVR ISP-6 Serial Programming Header                AVR-ISP-6
-1x         LED1              cool-white      Osram-LED-Duris-E3, 2.240mcd, 3V/30mA, SMD-3014    Chipled 1206
-1x         LED2              blue            High-Efficiency LED, 2.5V-forward-voltage, SMD     Chipled 0805
-1x         MD1               OLED-Display    I2C OLED-Module 0.96", (SSD1306 chip), SMD         128x64px
-1x         R1                10k             Resistor, SMD                                      R0603
-1x         R2                33R             Resistor, SMD                                      R0603
-4x         R3,R4,R5,R6       100k            Resistor, SMD                                      R0603
-2x         R7,R8             1k              Resistor, SMD                                      R0603
-2x         S1,S2             Push-Button     Micro Tactile Switch 12V, 50mA, SMD                3.7x6x2.5mm
-1x         T1                FDC6327C        Dual N+P-Channel Mosfet, SMD                       SOT23-6
-14x        Socket            1x40 Pin        Female Socket-header, short (L:7.0mm, hole:0.6mm)  RM:2,54mm
-1x         Board             FR4 #0.8mm      Mainboard, 2-layer (Cu 35um), #0.8mm               27.3x26.9mm
-1x         Case              PLA or PETG     3D printed, 0.13mm layer-height, 100% Infill       31x36x10mm
-1x         Lid               PLA or PETG     Bottom-Lid, case-latching                          29x28x2mm
-1x         Strap             Inox            20mm Quick Release Milanese Mesh Watch Band        width: 20mm
-2x         Wire              Inox or Steel   Inox or Galvanized Steel-Wires ø1.2mm              L: 29mm
-2x         Bushing           Inox or Steel   Inox- or Brass-Bushing, ø1.8/1.5 mm                L: 20mm
+<b><code>
+Qty.  Components      Value          Description                                        Package</code></b><code>
+1x     C1              2,2uF          Capacitor, SMD                                     C0603
+3x     C2,C3,C4        1uF            Capacitor, SMD                                     C0603
+5x     C5,C6,C7,C8,C9  100n           Capacitor, SMD                                     C0603
+2x     D1,D2           BAS40-05(W)    Dual-Schottky-Diode, low-leakage (1uA), SMD        SOT23 (-323-R)
+1x     IC1             ATMEGA328P     8-bit Microcontroller (4x8 = 32 Pin), SMD          TQFP32-08
+1x     IC2             DS3231MZ       RTC Real-Time Clock (8-Pin), SMD                   SO08
+1x     JP1             AVR-ISP-6      AVR ISP-6 Serial Programming Header                AVR-ISP-6
+1x     LED1            cool-white     Osram-LED-Duris-E3, 2.240mcd, 3V/30mA, SMD-3014    Chipled 1206
+1x     LED2            blue           High-Efficiency LED, 2.5V-forward-voltage, SMD     Chipled 0805
+1x     MD1             OLED-Display   I2C OLED-Module 0.96", (SSD1306 chip), SMD         128x64px
+1x     R1              10k            Resistor, SMD                                      R0603
+1x     R2              33R            Resistor, SMD                                      R0603
+4x     R3,R4,R5,R6     100k           Resistor, SMD                                      R0603
+2x     R7,R8           1k             Resistor, SMD                                      R0603
+2x     S1,S2           Push-Button    Micro Tactile Switch 12V, 50mA, SMD                3.7x6x2.5mm
+1x     T1              FDC6327C       Dual N+P-Channel Mosfet, SMD                       SOT23-6
+14x    Socket          1x40 Pin       Female Socket-header, short (L:7.0mm, hole:0.6mm)  RM:2,54mm
+1x     Board           FR4 #0.8mm     Mainboard, 2-layer (Cu 35um), #0.8mm               27.3x26.9mm
+1x     Case            PLA or PETG    3D printed, 0.13mm layer-height, 100% Infill       31x36x10mm
+1x     Lid             PLA or PETG    Bottom-Lid, case-latching                          29x28x2mm
+1x     Strap           Inox           20mm Quick Release Milanese Mesh Watch Band        width: 20mm
+2x     Wire            Inox or Steel  Inox or Galvanized Steel-Wires ø1.2mm              L: 29mm
+2x     Bushing         Inox or Steel  Inox- or Brass-Bushing, ø1.8/1.5 mm                L: 20mm
 </code>   
 
 ----
@@ -72,4 +73,4 @@ Case, Lid and battery-Holder are 3D-Printed with 0.13mm Layer-height and 100% In
 
 ---
 
-*(Download Github-files &nbsp;on&nbsp; ![DIY-Wrist-Watch](https://github.com/nlohr1/DIY-Wrist-Watch))*  
+*(Download Github-files: &nbsp;![DIY-Wrist-Watch](https://github.com/nlohr1/DIY-Wrist-Watch))*  
