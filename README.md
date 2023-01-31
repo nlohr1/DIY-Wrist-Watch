@@ -1,14 +1,17 @@
 # DIY-Wrist-Watch
 ### 3D-Printed Arduino OLED-Clock with small RTC
 
-New small OLED-Clock with **8-pin** RTC-chip DS3231**MZ** (RTC = Real-Time Chip) and the commonly known Arduino ATmega328-chip/uController, in conjunction with an OLED-Display (SSD1306-chip) - displaying Date, Time, (Battery)-Voltage and Skin-Temperature.
+Small OLED-Clock with **8-pin** RTC-chip DS3231**MZ** (RTC = Real-Time Chip) and the commonly known Arduino ATmega328-chip/uController,  
+in conjunction with a OLED-Display (SSD1306-chip) - displaying Date, Time, (Battery)-Voltage and Skin-Temperature.
 
----
+----
+**Case and PCB-layout:**  
+<img src="https://github.com/nlohr1/DIY-Wrist-Watch/blob/main/OLED-Clock-6-nl_Case.png" width="450"><img src="https://github.com/nlohr1/DIY-Wrist-Watch/blob/main/OLED-Clock-6-nl-brd.png" width="550">  
 
-![OLED-Clock Case](https://github.com/nlohr1/DIY-Wrist-Watch/blob/main/OLED-Clock-6-nl_Case.png)
-![OLED-Clock schematic](https://github.com/nlohr1/DIY-Wrist-Watch/blob/main/OLED-Clock-6-nl-sch.png)  
-![OLED-Clock pcb-layout](https://github.com/nlohr1/DIY-Wrist-Watch/blob/main/OLED-Clock-6-nl-brd.png)
+**OLED-Clock schematic:**  
+<img src="https://github.com/nlohr1/DIY-Wrist-Watch/blob/main/OLED-Clock-6-nl-sch.png">  
 
+----
 ### Partlist (BOM) for "OLED-Clock-6-nl.sch":  
 <b><code>Qty.      Components        Value           Description -                                      Package</code></b><code>
 1x         C1                2,2uF           Capacitor, SMD                                     C0603
@@ -36,21 +39,24 @@ New small OLED-Clock with **8-pin** RTC-chip DS3231**MZ** (RTC = Real-Time Chip)
 2x         Bushing           Inox or Steel   Inox- or Brass-Bushing, ø1.8/1.5 mm                L: 20mm
 </code>   
 
-___
-Both, Micro-Processor and OLED are switched-on at Button-press, and off/disconnected from Battery **per hardware** (Schmitt-Trigger Transistor-circuit) after about 8 seconds, so that the only remaining comsumtion comes from RTC-chip in stand-by-mode, consuming less than 1uA.  
-I resigned to use the uControllers software-"power-down" function, because this does not disconnect the OLED-display(chip) and other chips on board from Battery, which are causing additional power-consumtions.  
+----
+Both, Micro-Processor and OLED are switched-on at Button-press, and off/disconnected from Battery **per hardware** (Schmitt-Trigger Transistor-circuit) after about 8 seconds, so that the only remaining comsumtion comes from RTC-chip (in stand-by-mode), consuming less than 1uA.  
+
+I resigned to use the uControllers software-"power-down"-function, because this does not disconnect the OLED-display(chip) and other chips on board from Battery, which are causing additional power-consumtions.  
 Current-Leakages are minimized through the double-mosfet FDC6237 (small Gate-Capacitances and Gate Threshold Voltages with 1-2V) and two double-diodes (BAS40-05W) with very small leakage-currents of 20nA.  
 With this configuration the CR2032-Lithium-Battery lasts more than 2 years (proved! - using the clock-display about 10 times/day).
 
 The Clock additionally provides a calendar, displaying the actual month(days) and a relatively bright Flashlight-LED, consuming only about 10mA.
 
-Two Buttons are handling the Display-"On", FlashLight-On/Off, Calendar and Set/Reset of the Clock, meanwhile Display-"Off" is done automatically after 8 seconds.
-The code is subdivided in several sections, commented on the code-head with jump-markers: §0, §1, §2...  
+Two Buttons are handling the Display-"On", Calendar, FlashLight-On/Off and Set/Reset of the Clock, meanwhile Display-"Off" is done automatically after 8 seconds.
+The code is subdivided in several sections, with jump-markers: §0, §1, §2... explained in the code-head.  
 I commented every line of the software, so it's possible to understand and modify it (at your own "risk")...  
 The "OLED-Watch-6-nl-Manual.txt" file provides a short user-manual list.  
 
 The Software code (Arduino-based C++) is flashed through an ISP-Programmer to the ATmega328-Chip - without bootloader, to save start-time.  
-To flash the chip I use the known **avrdude** command-line-program, flashing the Arduino-compiled resulting hex-file with an ISP-Programmer (USBasp), this connected on one side through USB-Port to my Notebook and on the other through a 6-pole ISP-Connector-Socket to the Clock-board.
+To flash the chip I use the known **avrdude** command-line-program, flashing the Arduino-compiled resulting hex-file with an ISP-Programmer (USBasp), this connected on one side through USB-Port to my Notebook and on the other through a 6-pole ISP-Connector-Socket to the Clock-board.  
+Avrdude-Commands to flash the code into the ATmeag328-chip are explained on the end of the code-file:  
+> **"OLED-Clock-w-Led-and-Calendar.ino"**. *(open this file with a Text-Editor like Notepadd++)*
 
 Case, Lid and battery-Holder are 3D-Printed with 0.13mm Layer-height and 100% Infill (PLA: 205°C / 60°C). I provided .stl-files of case, lid and battery-holder, also the corresponding .gcode-files for a 220x220mm 3D-Printer (Hot-)bed, as beeing my Anycubic-Pro, also usable for similar printers like Prusa-MK3, etc.
 
