@@ -1,15 +1,21 @@
 # DIY-Wrist-Watch
-### 3D-Printed Arduino OLED-Clock with small RTC
+### Small 3D-Printed OLED-Clock with RTC - Arduino based
 
-Small OLED-Clock with **8-pin** RTC-chip DS3231**MZ** (RTC = Real-Time Chip) and the commonly known Arduino ATmega328-chip/uController,  
+Small OLED-Clock with small **8-pin** Real-Time chip DS3231**MZ** and the commonly known (Arduino) ATmega328 Controller,  
 in conjunction with a OLED-Display (SSD1306-chip) - displaying Date, Time, (Battery)-Voltage and Skin-Temperature.
 
 ----
-**Case and PCB-layout:**  
-<img src="https://github.com/nlohr1/DIY-Wrist-Watch/blob/main/OLED-Clock-6-nl_Case.png" width="450"><img src="https://github.com/nlohr1/DIY-Wrist-Watch/blob/main/OLED-Clock-6-nl-brd.png" width="550">  
+**OLED-Clock Case:**  
+<img src="https://github.com/nlohr1/DIY-Wrist-Watch/blob/main/OLED-Clock-6-nl_Case.png" width="600">  
 
-**OLED-Clock schematic:**  
+**Schematic:**  
 <img src="https://github.com/nlohr1/DIY-Wrist-Watch/blob/main/OLED-Clock-6-nl-sch.png">  
+
+**PCB-Layout**  
+<img src="https://github.com/nlohr1/DIY-Wrist-Watch/blob/main/OLED-Clock-6-nl-brd.png" width="650">  
+
+**Fotos**  
+
 
 ----
 ### Partlist (BOM) for "OLED-Clock-6-nl.sch":  
