@@ -58,7 +58,7 @@ To flash the chip I use the known **avrdude** command-line-program, flashing the
 Avrdude-Commands to flash the code into the ATmeag328-chip are explained on the end of the code-file:  
 > **"OLED-Clock-w-Led-and-Calendar.ino"**. *(open this file with a Text-Editor like Notepadd++)*
 
-Case, Lid and battery-Holder are 3D-Printed with 0.13mm Layer-height and 100% Infill (PLA: 205°C / 60°C). I provided .stl-files of case, lid and battery-holder, also the corresponding .gcode-files for a 220x220mm 3D-Printer (Hot-)bed, as beeing my Anycubic-Pro, also usable for similar printers like Prusa-MK3, etc.
+Case, Lid and battery-Holder are 3D-Printed with 0.13mm Layer-height and 100% Infill (PLA: 210°C / 60°C). I provided .stl-files of case, lid and battery-holder, also the corresponding .gcode-files for a 220x220mm 3D-Printer (Hot-)bed, as beeing my Anycubic-Pro, also usable for similar printers like Prusa-MK3, etc.
 
 - Sliced with Prusa-Slicer - my profile-file: "prusaslicer_config.ini" - you may load it with the Hotkey [Ctr+L]  
 
