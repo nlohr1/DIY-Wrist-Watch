@@ -6,13 +6,13 @@ in conjunction with a 128x64px OLED-Display (SSD1306-chip) - displaying Date, Ti
 
 ----
 **OLED-Clock Case & Foto:**  
-<img src="https://github.com/nlohr1/DIY-Wrist-Watch/blob/main/OLED-Clock-6-nl_Case.png" width="550"> <img src="https://github.com/nlohr1/DIY-Wrist-Watch/blob/main/OLED-Clock-v6_details.jpg" width="350">  
+<img src="https://github.com/nlohr1/DIY-Wrist-Watch/blob/main/OLED-Clock-6-nl_Case.png" width="500"> <img src="https://github.com/nlohr1/DIY-Wrist-Watch/blob/main/OLED-Clock-v6_details.jpg" width="300">  
 
 **Schematic:**  
 <img src="https://github.com/nlohr1/DIY-Wrist-Watch/blob/main/OLED-Clock-6-nl-sch.png">  
 
 **PCB-Layout:**  
-<img src="https://github.com/nlohr1/DIY-Wrist-Watch/blob/main/OLED-Clock-6-nl-brd.png" width="650">  
+<img src="https://github.com/nlohr1/DIY-Wrist-Watch/blob/main/OLED-Clock-6-nl-brd.png" width="800">  
 
 ----
 ### Partlist (BOM) for "OLED-Clock-6-nl.sch":  
@@ -59,7 +59,8 @@ The "OLED-Watch-6-nl-Manual.txt" file provides a short user-manual list.
 The Software code (Arduino-based C++) is flashed through an ISP-Programmer to the ATmega328-Chip - without bootloader, to save start-time.  
 To flash the chip I use the known **avrdude** command-line-program, flashing the Arduino-compiled resulting hex-file with an ISP-Programmer (USBasp), this connected on one side through USB-Port to my Notebook and on the other through a 6-pole ISP-Connector-Socket to the Clock-board.  
 Avrdude-Commands to flash the code into the ATmeag328-chip are explained on the end of the code-file:  
-> **"OLED-Clock-w-Led-and-Calendar.ino"**. *(open this file with a Text-Editor like Notepadd++)*
+
+> **"OLED-Clock-w-Led-and-Calendar.ino"** *(open this file with a Text-Editor like Notepadd++)* or directly with the Arduino-GUI.
 
 Case, Lid and battery-Holder are 3D-Printed with 0.13mm Layer-height and 100% Infill (PLA: 210°C / 60°C). I provided .stl-files of case, lid and battery-holder, also the corresponding .gcode-files for a 220x220mm 3D-Printer (Hot-)bed, as beeing my Anycubic-Pro, also usable for similar printers like Prusa-MK3, etc.
 
@@ -67,7 +68,7 @@ Case, Lid and battery-Holder are 3D-Printed with 0.13mm Layer-height and 100% In
 
 - PCB schematic and Layout: Eagle 7.4
 - Prototype etched with 0.8mm FR4-board with Toner-Direct methode (2 layers: first CNC-drilled the FR-material, then transferred the layout with toner-transfer-paper: 2 layers fixed/congruented with 0.4mm needles/wire-clamps through FR4-board on the 4 outer-edges), the FR4-board blank/fine-sanded + cleaned with acetone, toner-laminated with a 200°C (modified laminator), etched in sodium persulfate @ about 80°C ( <5min ) + finally hot-tinned (both sides) with a flat soldering iron.
-- CAM-files for ![JLCPCB](https://jlcpcb.com/) &nbsp;⇒&nbsp; in "OLED-Clock-6_JLCPCB_CAM.zip" (0.8mm FR4-board).
+- CAM-files for ![JLCPCB](https://jlcpcb.com/) &nbsp;⇒&nbsp; **"OLED-Clock-6_JLCPCB_CAM.zip"** (0.8mm FR4-board with PCB-Assenbly!).
 
 ---
 
