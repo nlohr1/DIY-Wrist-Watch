@@ -6,7 +6,7 @@ in conjunction with a 128x64px OLED-Display (SSD1306-chip) - displaying Date, Ti
 
 ----
 **OLED-Clock Case & Foto:**  
-<img src="https://github.com/nlohr1/DIY-Wrist-Watch/blob/main/OLED-Clock-6-nl_Case.png" width="450"><img scr="https://github.com/nlohr1/DIY-Wrist-Watch/blob/main/OLED-Clock-v6_details.jpg" width="450">  
+<img src="https://github.com/nlohr1/DIY-Wrist-Watch/blob/main/OLED-Clock-6-nl_Case.png" width="550"> <img src="https://github.com/nlohr1/DIY-Wrist-Watch/blob/main/OLED-Clock-v6_details.jpg" width="350">  
 
 **Schematic:**  
 <img src="https://github.com/nlohr1/DIY-Wrist-Watch/blob/main/OLED-Clock-6-nl-sch.png">  
