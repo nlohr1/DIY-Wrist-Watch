@@ -72,4 +72,4 @@ Case, Lid and battery-Holder are 3D-Printed with 0.13mm Layer-height and 100% In
 
 ---
 
-*Download Github-files &nbsp;⇒&nbsp; ![DIY-Wrist-Watch](https://github.com/nlohr1/DIY-Wrist-Watch)*  
+*Download Github-files &nbsp;on&nbsp; ![DIY-Wrist-Watch](https://github.com/nlohr1/DIY-Wrist-Watch)*  
