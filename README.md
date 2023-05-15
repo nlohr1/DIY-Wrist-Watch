@@ -12,7 +12,7 @@ in conjunction with a 128x64px OLED-Display (SSD1306-chip) - displaying Date, Ti
 <img src="https://github.com/nlohr1/DIY-Wrist-Watch/blob/main/OLED-Clock-6-nl-sch.png">  
 
 **PCB-Layout:**  
-<img src="https://github.com/nlohr1/DIY-Wrist-Watch/blob/main/OLED-Clock-6-nl-brd.png" width="800">  
+<img src="https://github.com/nlohr1/DIY-Wrist-Watch/blob/main/OLED-Clock-6-nl_brd.png" width="800">  
 
 ----
 ### Partlist (BOM) for "OLED-Clock-6-nl.sch":  
