@@ -390,8 +390,8 @@ void loop() {
   sett_Count++; //increase the counter each loop +1 (to compare later if Button-D6 is longer "down"...
   if (BUTTON_D6 == 0) { //if Button-D6 (=PD6) was pressed, the Falling-Interrupt function (ISR) sets the Button-STATE "BUTTON_D6" to LOW //(!digitalRead(6) replaced per Pin-Change-Interrupt !
     //delay(30);        //here debounce is not necessary because ISR can only set "BUTTON_D6" to "0"(=FALLING), not to "1" - this happens later,
-    //so starting a 2-function "non-blocking delay" with state-flags (important: not obstructing the uC going ahead-round in the loop!)
-    if (sett_Flag == 0) { sett_Count = 0; sett_Flag = 1; } //if D6is pressed, then set its flag "active" and RESET its Counter
+    //so starting a 2-function "non-blocking delay" with state-flags (important: not obstructing the uC going ahead/round in the loop!)
+    if (sett_Flag == 0) { sett_Count = 0; sett_Flag = 1; } //if D6 is pressed, then set its flag "active" and RESET its Counter
     //Control every loop: Button still down after 4 loops? (~400ms)...
     //...then a) jump-into SELECT-SETTINGS-Display (mode 3)...
     if ((mode == 0) && (sett_Flag == 1) && (sett_Count >= 4)) { //only in mode-0: if Button-D6 still is hold-down longer than 4 loops (~400ms) and if its flag still is active,
@@ -423,7 +423,7 @@ void loop() {
     //then activate VCC:
     PORTD |= B00100000; //digitalWrite(5, HIGH); //stabilize the Dual-Mosfet-Flip-Flop with Pin-D5 HIGH (yet "On" while Button-D8 pressed),
                         //so Mosfet-Pair is conducting VBAT to VCC and uC + OLED-Display are getting current from Battery.
-    if ((chng_Flag == 1) && (chng_Count >= 1)) { //wait 1 loop ≈100ms (to stabilize Button-D8 bouncing)
+    if ((chng_Flag == 1) && (chng_Count >= 2)) { //wait 2 loops  of each ~100ms ≈ 200ms (to stabilize Button-D8 bouncing)
       led_On = !led_On; chng_Flag = 0; //toggle FlashLight on or off and reset D8-flag
     }
     if (mode >= 1) { led_On = 0; } //If in Calendar-mode and Button-D8-pressed, turn-off FlashLight and terminate Calendar instantly, toggling with (default) mode-0 (=Clock-Display)
@@ -636,15 +636,15 @@ void valuesToZero() {
 
   //////////////////////////////////////////////////////////////////////
   //--------------- §2c Calculate Voltage of the Battery ---------------
-  batt_value = analogRead(A0); //measures the voltage on the A0-Pin (= Pin-14)
+  batt_value = analogRead(A0); //measures the analog-voltage on the A0-Pin (= Pin-14)
   //float volts = 0.0010753 * val;   //= (1.1/1023) * val; //max. Volts on Pin A0 ! (blue-LED: 2,5V forward voltage / 100kΩ / 8µA current)
-  //Batt-full   = 3,0V -2,5Vled = 0,5Vmax; (alt. full: 3,25V)
+  //Batt-full   = 3,1V -2,5Vled = 0,6Vmax; (alt. full: 3,25V...)
   //Batt.-empty = 2,6V -2,5Vled = 0,1Vmin
   //Calculation:
-  //Batt-full ⇒  0,5V/1,1Vref = 0,4545 * 1023 = 465 bits (Max.) ⇒ rounded to 470 bits
-  //Batt-empty ⇒ 0,1V/1,1Vref = 0,091 * 1023 =  93 bits (Min.) ⇒ rounded to 100 bits
+  //Batt-full ⇒  0,6V/1,1Vref = 0,5454 * 1023 = 558 bits (Max.) ⇒ rounded to 560 bits ⇒ 520 (new)
+  //Batt-empty ⇒ 0,1V/1,1Vref = 0,091 * 1023 =  93 bits (Min.) ⇒ rounded to 100 bits ⇒ 80 (new)
   //Reminder to self: map(batt_value, fromLow, fromHigh, toLow, toHigh)
-  int vol = map(batt_value, 100, 470, 0, 14);  //16(px) = total bar-length; 14px = inner-length (1px-border)
+  int vol = map(batt_value, 80, 520, 0, 14);  //16(px) = total bar-length; 14px = inner-length (2x 1px - border left/right)
   if (vol >= 14) {vol = 14;} //limitation to max. 14px length
 
   //Now draw Battery + display Voltage
@@ -797,9 +797,11 @@ FLASHING compiled Code directly with avrdude, to minimize uC-StartUp-time (skipp
 
 There, on the resulting Command line, enter:
 
+
     //////////////////////////////////////////////////////////////////////////////////////////////////
     avrdude.exe -v -V -p m328p -c usbasp -B10 -e -D -U flash:w:OLED-Clock-w-Led-and-Calendar.ino.hex:i
     //////////////////////////////////////////////////////////////////////////////////////////////////
+
 
       !!! Att.: If on the command-prompt avrdude.exe can't be found, include the path to avrdude.exe, like: C:\Program files\Avrdude\avrdude.exe (...etc.)
 
