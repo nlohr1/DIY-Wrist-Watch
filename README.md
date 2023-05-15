@@ -64,6 +64,9 @@ Avrdude-Commands to flash the code into the ATmeag328-chip are explained on the 
 > **"OLED-Clock-w-Led-and-Calendar.ino"** *(open this file with a Text-Editor like Notepadd++)*  
 > or directly in the Arduino-GUI.
 
+Command-line:  
+> avrdude.exe -v -V -p m328p -c usbasp -B10 -e -D -U flash:w:OLED-Clock-w-Led-and-Calendar.ino.hex:i
+
 The Case, Lid and battery-Holder are 3D-Printed with 0.13mm Layer-height and 100% Infill (PLA: 210°C / 60°C). I provided .stl-files of case, lid and battery-holder, also the corresponding .gcode-files for a 220x220mm 3D-Printer, as beeing Prusa-MK3 or similar printers like Anycubic-Pro, etc. (negligible differences in bed-sizes).
 
 - Sliced with Prusa-Slicer - my profile-file: "prusaslicer_config.ini" - you may load it with the Hotkey [Ctr+L]  
