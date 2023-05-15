@@ -69,6 +69,6 @@ The Case, Lid and battery-Holder are 3D-Printed with 0.13mm Layer-height and 100
 - Sliced with Prusa-Slicer - my profile-file: "prusaslicer_config.ini" - you may load it with the Hotkey [Ctr+L]  
 
 - PCB schematic and Layout: Eagle 7.4
-- Prototype etched with 0.8mm FR4-board with Toner-Direct methode (2 layers: first CNC-drilled the FR-material, then transferred the layout with toner-transfer-paper: 2 layers fixed/congruented with 0.4mm needles/wire-clamps through FR4-board on the 4 outer-edges), the FR4-board blank/fine-sanded + cleaned with acetone, toner-laminated with a 200°C (modified laminator), etched in sodium persulfate @ about 80°C ( <5min ) + finally hot-tinned (both sides) with a flat soldering iron.
+- Prototype etched with 0.8mm FR4-board with Toner-Direct methode (2 layers: first CNC-drill the FR-material, then transfer the layout with toner-transfer-paper: 2 layers fixed/congruented with 0.4mm needles, this exchanged with ø0,4mm wire-clamps on FR4-board on the 4 outer-edges + fixed with kapton-band on top and sides, the FR4-board (blank/fine-sanded + cleaned with acetone) then toner-laminated with a (200°C modified) laminator, etched in sodium persulfate @ about 80°C (duration ≈ about 5min) + finally hot-tinned (both sides) with a flat soldering iron.
 ---
 -eof-
