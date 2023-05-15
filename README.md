@@ -68,7 +68,7 @@ Avrdude-Commands to flash the code into the ATmeag328-chip are explained on the 
 use the .hex-result in following Avrdude Command-line:  
 > avrdude.exe -v -V -p m328p -c usbasp -B10 -e -D -U flash:w:OLED-Clock-w-Led-and-Calendar.ino.hex:i
 
-The Case, Lid and battery-Holder are 3D-Printed with 0.13mm Layer-height and 100% Infill (PLA: 210°C / 60°C). I provided .stl-files of case, lid and battery-holder, also the corresponding .gcode-files for a 220x220mm 3D-Printer, as beeing Prusa-MK3 or similar printers like Anycubic-Pro, etc. (negligible differences in bed-sizes).
+The Case, Lid and battery-Holder are 3D-Printed with 0.13mm Layer-height and 100% Infill (PLA: 210°C / 60°C). I provided .stl-files of case, lid and battery-holder, also the corresponding .gcode-files for a medium 3D-Printer (bed-size about: 220 x 220 mm), as beeing Prusa-MK3 or similar printers like Anycubic-Pro, etc. (negligible differences in bed-sizes).
 
 - Sliced with Prusa-Slicer - my profile-file: "prusaslicer_config.ini" - you may load it with the Hotkey [Ctr+L]  
 
