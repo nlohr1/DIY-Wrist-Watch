@@ -17,8 +17,7 @@ Att: Push-Buttons soldered on PCB-background! - Female Socket-headers (yellow bu
 
 ----
 ### Partlist (BOM) for "OLED-Clock-6-nl.sch":  
-<b><code>
-Qty.  Components      Value          Description                                        Package</code></b><code>
+<pre><b><code>Qty.  Components      Value          Description                                        Package</code></b><code>
 1x     C1              2,2uF          Capacitor, SMD                                     C0603
 3x     C2,C3,C4        1uF            Capacitor, SMD                                     C0603
 5x     C5,C6,C7,C8,C9  100n           Capacitor, SMD                                     C0603
@@ -42,7 +41,7 @@ Qty.  Components      Value          Description                                
 1x     Strap           Inox           20mm Quick Release Milanese Mesh Watch Band        width: 20mm
 2x     Wire            Inox or Steel  Inox or Galvanized Steel-Wires ø1.2mm              L: 29mm
 2x     Bushing         Inox or Steel  Inox- or Brass-Bushing, ø1.8/1.5 mm                L: 20mm
-</code>   
+</code></pre>   
 
 ----
 Both, Micro-Processor and OLED are switched-on at Button-press, and off/disconnected from Battery **per hardware** (Schmitt-Trigger Transistor-circuit) after about 8 seconds, so that the only remaining comsumtion comes from RTC-chip (in stand-by-mode), consuming less than 1uA.  
@@ -61,10 +60,10 @@ The "OLED-Watch-6-nl-Manual.txt" file provides a short user-manual list.
 The Software code (Arduino-based C++) is flashed through an ISP-Programmer to the ATmega328-Chip - **without bootloader**, to save start-time.  
 To flash the chip I use the known **avrdude** command-line-program, flashing the Arduino-compiled resulting hex-file with an ISP-Programmer (USBasp), this connected on one side through USB-Port to my Notebook and on the other through a 6-pole ISP-Connector-Socket to the Clock-board.  
 
-Avrdude-Commands to flash the code into the ATmeag328-chip are explained on the end of the code-file:  
+Avrdude-Commands to flash the code into the ATmeag328-chip are explained on the end of the program-file:  
 
 > **"OLED-Clock-w-Led-and-Calendar.ino"** *(open/edit this file with a Text-Editor like Notepadd++)*  
-> or directly in the Arduino-GUI, then compile it and
+> &nbsp; or directly in the Arduino-GUI, then compile it and
 
 use the .hex-result in following command-line:  
 > avrdude.exe -v -V -p m328p -c usbasp -B10 -e -D -U flash:w:OLED-Clock-w-Led-and-Calendar.ino.hex:i
