@@ -46,7 +46,7 @@ Att: Push-Buttons soldered on PCB-background! - Female Socket-headers (yellow bu
 ----
 Both, Micro-Processor and OLED are switched-on at Button-press, and off/disconnected from Battery **per hardware** (Schmitt-Trigger Transistor-circuit) after about 8 seconds, so that the only remaining consumption comes from RTC-chip (in stand-by-mode), consuming less than 1uA.  
 
-I resigned to use the uControllers software-"power-down"-function, because this does not disconnect the OLED-display(chip) and other chips on board from Battery, which are causing additional power-consumtions.  
+I resigned to use the uControllers software-"power-down"-function, because this does not disconnect the OLED-display(chip) and other chips on board from Battery, which are causing additional power-consumptions.  
 Current-Leakages are minimized through the double-mosfet FDC6237 (small Gate-Capacitances and Gate Threshold Voltages with 1-2V) and two double-diodes (BAS40-05W) with very small leakage-currents of 20nA.  
 With this configuration the CR2032-Lithium-Battery lasts more than 2 years (proved! - using the clock-display about 10 times/day).
 
