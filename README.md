@@ -55,12 +55,12 @@ The Clock additionally provides a calendar, displaying the actual month(days) an
 Two Buttons are handling the Display-"On", Calendar, FlashLight-On/Off and Set/Reset of the Clock, meanwhile Display-"Off" is done automatically after 8 seconds.
 The code is subdivided in several sections, with jump-markers: §0, §1, §2... explained in the code-head.  
 I commented every line of the software, so it's possible to understand and modify it (at your own "risk")...  
-The "OLED-Watch-6-nl-Manual.txt" file provides a short user-manual list.  
+File "OLED-Watch-6-nl-Manual.txt" provides a short user-manual list.  
 
-The Software code (Arduino-based C++) is flashed through an ISP-Programmer to the ATmega328-Chip - **without bootloader**, to save start-time.  
-To flash the chip I use the known **avrdude** command-line-program, flashing the Arduino-compiled resulting hex-file with an ISP-Programmer (USBasp), this connected on one side through USB-Port to my Notebook and on the other through a 6-pole ISP-Connector-Socket to the Clock-board.  
+The Software program-code (Arduino-based C++) is flashed through an ISP-Programmer to the ATmega328-Chip - **without bootloader**, to save start-time.  
+To flash the chip I use the known **avrdude** as command-line-program, flashing the (Arduino-compiled) resulting hex-file with an ISP-Programmer (USBasp or similar), this programmer connected on one side through USB to my Notebook and on the other through a 6-pole ISP-Connector-Socket to the 6 Clock-pcb-board bushings.  
 
-Avrdude-Commands to flash the code into the ATmeag328-chip are explained on the end of the program-file:  
+Avrdude command lines to flash the code into the ATmeag328-chip are explained also on the end of the program-file:  
 
 > **"OLED-Clock-w-Led-and-Calendar.ino"** *(open/edit this file with a Text-Editor like Notepadd++)*  
 > &nbsp; or directly in the Arduino-GUI, then compile it and
@@ -70,7 +70,7 @@ use the .hex-result in following command-line:
 
 The Case, Lid and battery-Holder are 3D-Printed with 0.13mm Layer-height and 100% Infill (PLA: 210°C / 60°C). I provided .stl-files of case, lid and battery-holder, also the corresponding .gcode-files for a medium 3D-Printer (bed-size about: 220 x 220 mm), as beeing Prusa-MK3 or similar printers like Anycubic-Pro, etc. (negligible differences in bed-sizes).
 
-- Sliced with Prusa-Slicer - my profile-file: "prusaslicer_config.ini" - you may load it with the Hotkey [Ctr+L]  
+- Sliced with Prusa-Slicer - my profile-file: "prusaslicer_config.ini" - you may load it with the Hotkey [Ctr+L] into the Prusa-Slicer...  
 
 - PCB schematic and Layout: Eagle 7.4
 - Prototype etched with 0.8mm FR4-board with Toner-Direct methode (2 layers: first CNC-drilled the FR-material, (blank/fine-sanded + cleaned with acetone), then transferred the layout with toner-transfer-paper: 2 layers fixed/congruented on the 4 outer-edges/holes with ø0.4mm needles, this needles exchanged with ø0,4mm clamping-wire, fixing the paper on the FR4-board also with kapton-band on top and both sides, this "sandwitch" then toner-laminated with a 200°C modified laminator, etched in sodium persulfate at 70-80°C (etching-result in ≈ 5-10 min) + finally hot-tinned both sides with a flat soldering iron.
