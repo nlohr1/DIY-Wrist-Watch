@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.025" unitdist="inch" unit="inch" style="dots" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -8479,6 +8479,7 @@ Int: hi-low</text>
 <wire x1="147.955" y1="40.64" x2="148.59" y2="40.64" width="0.1524" layer="94" style="shortdash"/>
 <wire x1="147.32" y1="37.465" x2="147.32" y2="35.56" width="0.1524" layer="94" style="shortdash"/>
 <text x="143.51" y="39.6875" size="1.778" layer="95">S2</text>
+<text x="196.85" y="167.005" size="1.778" layer="97">Dual N+P-Mosfet</text>
 </plain>
 <instances>
 <instance part="C2" gate="G$1" x="27.94" y="71.12" smashed="yes" rot="R90">
