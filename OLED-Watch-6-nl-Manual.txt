@@ -1,0 +1,61 @@
+﻿OLED-WristWatch-5-nl - Manual:
+==============================
+This OLED-Clock has a Date+Time Display, a Flashlight and a Calendar of actual month+day.
+The Display is dimmed at night between 11:00PM and 7:00AM  (23:00h and 07:00h).
+
+Function of the 2 Buttons (1 on the right-side and 1 on the left-side):
+=========================
+
+⇒ CHANGE-Button D8, (right-side), pressing:
+-------------------------------------------
+  1st press = Clock-Display "On": displays time+date
+  2nd press = light-up Flashlight-Torch
+  3rd press = return to Clock-Display / toggling Clock ⇔ Flashlight
+
+⇒ SELECT-Button D6 (left-side), pressing:
+-----------------------------------------
+  1st press = Calendar-Display of actual month
+  1st press = return to Clock-Display / toggle Clock ⇔ Calendar
+
+Clock-Settings:
+---------------
+If Button-D6 (left-side) is pressed more than 0.5 seconds, display shows
+Clock-Settings:
+
+  1x long = Time and Date-Settings
+  2x long = return to Normal-mode (Clock-Display)
+
+SetClock-Display:
+  - set dow
+  - day
+  - year
+  - hours
+  - minutes
+  - seconds
+
+To change seconds, set the clock +1 minute, then press Button-D8 at 59 seconds
+to synchronize to external "0"-time.
+
+FlashLight:
+-----------
+If right Button (D8) is pressed, the built-in FlashLight lights-up
+
+Month-Calendar:
+---------------
+If left Button (D6) is pressed, an actual Month-Calendar is displayed. If one of
+the two Buttons are pressed again, Calendar returns to Clock-Display.
+
+Battery:
+--------
+A normal CR2032 Lithium-Battery (ø20x3.2mm) provides about 200mAh Power.
+Contacts are made of insert-wire ø0.6mm, soldered to a thin ø0.2mm-wire.
+The Battery-Symbol indicates the approx. level of the battery (3,2V=full, 2,4V=empty).
+The Clock is working with voltages from +5.0V down to +2.0V (default: 3.0V).
+The Flash-LED works from max. +4.0V down to +2.7V. Do not activate with 5.0V!
+Both, uProcessor and RTC are 5V-tolerant (+5V to program the uC with Serial-USB
+through ISP-connection.
+
+!! Warning !!:
+--------------
+Don't recharge CR2032 Lithium-Ion-Batteries! They are recycleable, but
+non-rechargeable - if charged, they may explode or burn!
